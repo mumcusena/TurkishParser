@@ -1,0 +1,15 @@
+
+{
+    "S" : [["NP",  "VP"]],
+    "NP" : [["NOUN", "AUX"],["DET", "NOUN"], ["ADJ", "NOUN"]],
+    "VP" : [["VERB", "NP"], ["AUX", "VP"], ["VERB", "SUFFIX"], ["AUX", "SUFFIX"],["VERB", "ADV"]],
+    "AUX" : ["yap", "git"],
+    "DET" : ["bir", "bu", "o"],
+    "PRONSINGULAR" : ["ben", "sen", "o", "bu", "şu"],
+    "PRONPLURAL": ["biz", "siz", "onlar", "bunlar", "şunlar"],
+    "NOUN" : ["kedi", "köpek"],
+    "VERB": ["gel", "git", "yaz", "oku"],
+    "SUFFIX" : ["r", "ecek", "yor", "di"], 
+    "ADV": ["yavaşça", "hızlıca", "çok"],
+    "ADJ": ["beyaz", "siyah", "küçük", "büyük"]
+}
