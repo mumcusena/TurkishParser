@@ -1,5 +1,5 @@
 {
-    "S": [["NP_past", "VP_past"], ["NP_future", "VP_future"], ["NP", "VP"], ["NP", "VP_first_singular"], ["NP_first_singular", "VP_first_singular"], ["NP_second_singular", "VP_second_singular"]],
+    "S": [["NP_past", "VP_past"], ["NP_future", "VP_future"], ["NP", "VP"], ["NP", "VP_first_singular"], ["NP_first_singular", "VP_first_singular"], ["NP_second_singular", "VP_second_singular"], ["NP_second_singular", "VERB_imperative_second_singular"], ["NP", "VERB_imperative_second_singular"]],
     "VP_past": [["VERB", "SUFFIX_past"]],
     "VP_future": [["VERB", "SUFFIX_future"]],
     "VP": [["VERB", "SUFFIX_continuous"], ["VERB", "SUFFIX_simple"], ["VERB", "TENSE_simple"], ["NOUN", "SUFFIX_copular"], ["VERB"]],
@@ -15,6 +15,7 @@
     "SUFFIX_past_second_singular": [["TENSE_past", "POSPRON_second_singular"]],
     "NP_future": [["ADV_future", "NP"]],
     "NP_past": [["ADV_past", "NOUN"], ["ADV_past", "NP"], ["NP_past", "NP"]],
+    "VERB_imperative_second_singular": [["VERB", "SUFFIX_imp_second_singular"], ["VERB", "SUFFIX_negation"]],
     "NP": [
         ["ADV_past", "NOUN"],
         ["ADV", "NOUN"],
@@ -68,6 +69,7 @@
     "SUFFIX_possessive": ["ım", "ümüz", "imiz", "ın", "in", "nun", "nin", "im", "m"],
     "SUFFIX_accusative": ["ü", "i", "ı"],
     "SUFFIX_dative": ["a", "ya", "e"],
+    "SUFFIX_imp_second_singular": [""],
     "SUFFIX_location": ["da", "ta"],
     "SUFFIX_source": ["tan", "ten", "nden", "den", "dan"],
     "SUFFIX_with": ["le"],

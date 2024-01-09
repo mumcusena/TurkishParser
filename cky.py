@@ -48,8 +48,8 @@ with open('grammar.json', 'r') as file:
     
 cky_parser = CKYParser(turkish_grammar)
 
-sentence = "sen yavaşça mama ye di n"
-# sentence = "yüksek ses le müzik dinle me"
+# sentence = "sen yavaşça mama ye di n"
+sentence = "yüksek ses le müzik dinle"
 parse_table = cky_parser.parse_sentence(sentence.split())
 
 #parse_table_output = [[list(cell) for cell in row] for row in parse_table]
