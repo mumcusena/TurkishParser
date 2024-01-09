@@ -1,9 +1,10 @@
 {
     "S" : [["NP",  "VP"]],
     "NP" : [["NOUN", "AUX"],["DET", "NOUN"], ["ADJ", "NOUN"], ["PREP", "NP"], ["DET", "NP"], ["PREPRON", "NOUN"]],
-    "VP" : [["VERB", "NP"], ["AUX", "VP"], ["VERB", "SUFFIX"], ["AUX", "SUFFIX"],["VERB", "ADV"], ["VERB", "TENSE", "POSPRON"], ["VERB", "TENSE"]],
+    "VP" : [["NOUN", "VERB"], ["NP", "VERB"], ["AUX", "VP"], ["VERB", "SUFFIX"], ["AUX", "SUFFIX"],["VERB", "ADV"], ["ADV", "VERB"], ["VERB", "TENSE", "POSPRON"], ["VERB", "TENSE", "QUESTION", "POSPRON"], ["VERB", "TENSE"] ],
     "AUX" : ["yap", "git"],
     "DET" : ["bir", "bu", "o"],
+    "QUESTION" : ["mı"],
     "POSPRON": ["POSPRON1", "POSPRON2"],
     "PREPRON": ["PREPRON1", "PREPRON2"],
     "PREPRON1" : ["ben", "sen", "o", "bu", "şu"],
@@ -16,8 +17,8 @@
     "PAST" : ["dı", "mış"],
     "PREP": ["altinda", "üstünde", "yanında", "önünde", "arkasında"], 
     "CONJ": ["ve", "veya", "ama", "fakat", "ancak", "ve", "ama", "ile", "eğer", "de", "hem", "yani", "öyleyse", "yoksa", "nitekim", "sanki", "oysa", "kim bilir", "de", "da", "ki"],
-    "NOUN" : ["kedi", "köpek"],
-    "VERB": ["gel", "git", "yaz", "oku"],
+    "NOUN" : ["kedi", "köpek", "mama"],
+    "VERB": ["gel", "git", "yaz", "oku", "ye"],
     "SUFFIX" : ["TENSE", "POSPRON"], 
     "ADV": ["yavaşça", "hızlıca", "çok"],
     "ADJ": ["beyaz", "siyah", "küçük", "büyük"]
