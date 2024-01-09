@@ -1,59 +1,60 @@
 # TurkishParser
+An implementation of the CKY parsing algorithm for the Turkish language using our custom Context-Free Grammar (CFG)
 
-## Parts of Speech in Turkish
-- noun (isim or ad "name");
-- pronoun (zamir "inner being", or adıl from ad);
-- adjective (sıfat "role, quality", or önad "front-noun");
-- verb (fiil "act, deed", or eylem "action" from eyle- "make, do");
-- adverb (zarf "envelope", or belirteç from belir- "determine");
-- postposition (ilgeç from ilgi "interest, relation");
-- conjunction (bağlaç from bağ "bond");
-- particle (edat, or ilgeç);
-- interjection (nidâ, or ünlem from ün "fame, repute, sound").
+The details for the CFG are as follows: 
+## Terminals for Turkish grammar:
+- ADV past: d ̈un
+- ADV future: seneye, yarın
+- ADV: yava ̧s ̧ca, epeyce
+- POSPRON first singular: m, um, im, ım
+- POSPRON second singular: n, sin
+- SUFFIX imp third singular: sin, sın, sun, s ̈un
+- SUFFIX third negation: [SUFFIX negation, SUFFIX imp third singular]
+- POSPRON first plural: k
+- POSPRON second plural: niz
+- SUFFIX possessive: ım,  ̈um ̈uz, imiz, ın, in, nun, nin, im, m, i, ı
+- SUFFIX accusative:  ̈u, i, ı
+- SUFFIX dative: a, ya, e
+- SUFFIX imp second singular: [Empty string for suffix]
+- SUFFIX location: da, ta
+- SUFFIX source: tan, ten, nden, den, dan
+- SUFFIX with: le
+- CONJ: ve
+- ADJ: beyaz, siyah, y ̈uksek, milli, tarihi, her
+- SUFFIX plural: ler, lar
+- TENSE future: acak, ecek, yecek, yacak
+- TENSE continuous: uyor, yor
+- TENSE simple: ır, r, sınız
+- TENSE past: dı, di, ti, du
+- QUESTION suffix: mı
+- QUESTION word: nezaman
+- SUFFIX negation: me, ma
+- SUFFIX copular: dir
+- PRON first singular: ben
+- PRON second singular: sen
+- PRON third singular: o
+- PRON first plural: biz
+- PRON second plural: siz
+- PRON third plural: onlar
 
-## Terminals:
-Det : Determiners like "bir", "bu", "o"
-Noun : Nouns like "kitap", "ev", "kedi"
-Pron : Personal pronouns like "ben", "sen", "o"
-Verb : Verbs in their base form like "yaz", "oku", "git"
-AUX : Auxiliary verbs like "ol", "git"
-Suffixes : Various suffixes (e.g., "-im", "-sin", "-dir", "-iyor", "-di")
-
-## Non-terminals:
-S : Sentence
-NP : Noun Phrase
-VP : Verb Phrase
-V : Verb
-A : Auxiliary Verb
-
-## Rules:
-Sentence:
-- S -> NP VP
-Noun Phrase:
-- NP -> Det Noun
-- NP -> Pron
-Verb Phrase:
-- VP -> V
-- VP -> A VP
-- VP -> V Suffix
-- VP -> A Suffix
-- VP -> V Suffix Suffix
-- VP -> A Suffix Suffix
-Verbs:
-- V -> "yaz"
-- V -> "oku"
-- ... 
-Auxiliary Verbs:
-- A -> "ol"
-- A -> "git"
-- ... 
-Suffixes: (suffix may be recursive)
-- Suffix -> "-im"
-- Suffix -> "-sin"
-- Suffix -> "-di"
-- Suffix -> "-iyor"
-- ... 
-Tenses:
-- Suffix -> "-er" (present continuous)
-- Suffix -> "-di" (past)
-- Suffix -> "-acak" (future)
+## Non-terminals for Turkish Grammar:
+- S
+- VP past
+- VP future
+- VP
+- VP first singular
+- VP second singular
+- SUFFIX past
+- SUFFIX future
+- SUFFIX continuous
+- SUFFIX simple
+- NP first singular
+- NP second singular
+- NP third singular
+- SUFFIX past first singular
+- SUFFIX past second singular
+- NP future
+- NP past
+- VERB imperative second singular
+- VERB imperative third singular
+- NP
