@@ -1,6 +1,6 @@
 from typing import List, Dict
 import json
-
+from test_data import sentence_data, expected_results
 
 class CKYParser:
     def __init__(self, grammar):
@@ -28,48 +28,29 @@ class CKYParser:
                             else:
                                 for item in table[i][k]: 
                                     table[i][j].add(item) 
-                                # for item in table[k][j]: 
-                                #     table[i][j-1].add(item) 
         return table
     
     def evaluate_parse(self, table: List)->bool:
         return "S" in table[0][-1]
     
 turkish_grammar = ""
-
 with open('grammar.json', 'r') as file:
     turkish_grammar = json.load(file)
     
 cky_parser = CKYParser(turkish_grammar)
 
-# sentence = "sen yavaşça mama ye di n"
-sentence = "yüksek ses le müzik dinle"
+test_results = []
+for sentence in sentence_data:
+    parse_table = cky_parser.parse_sentence(sentence.split())
+    result = cky_parser.evaluate_parse(parse_table)
+    test_results.append(result)
 
-correct_tests_sentences = ["sen yavaşça mama ye di n",
-                    "yüksek ses le müzik dinle me",
-                    "kitap ı nı getir me sin",
-                    "kitap ı aldı",
-                    "ben kedi m le okul a git ti m",
-                    "siyah kedi yarın gel ecek mi",
-                    "bu agaç ın altında her gece mehtap ı izle r di k",
-                    "destan lar milli kültür ümüz ü ve tarih imiz i anlat ır"
-                   ]
-false_tests_sentences = ["sen yavaşça mama ye di m",
-                        "anne m bugün okul a git ti n"
-                   ]
+accuracy = sum([1 if result == expected_results[i] else 0 for i, result in enumerate(test_results)]) / len(test_results)
+print(f"Accuracy of test data: {accuracy:.2f}")
 
-print("Correct sentences:")
-for correct_sentence in correct_tests_sentences:
-    parse_table = cky_parser.parse_sentence(correct_sentence.split())
-    print(f"{correct_sentence}: {cky_parser.evaluate_parse(parse_table)}")
-
-print("False sentences:")
-for false_sentence in false_tests_sentences:
-    parse_table = cky_parser.parse_sentence(false_sentence.split())
-    print(f"{false_sentence}: {cky_parser.evaluate_parse(parse_table)}")
-
-
-            
-        
-
-            
+#problematic:
+correct_sentence = "tarihi bir roman lar oku du m"
+parse_table = cky_parser.parse_sentence(correct_sentence.split())
+result = cky_parser.evaluate_parse(parse_table)       
+print(result)
+                    
