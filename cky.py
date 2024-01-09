@@ -49,8 +49,8 @@ accuracy = sum([1 if result == expected_results[i] else 0 for i, result in enume
 print(f"Accuracy of test data: {accuracy:.2f}")
 
 #problematic:
-correct_sentence = "tarihi bir roman lar oku du m"
+correct_sentence = "siz bura a enson nezaman gel di niz"
 parse_table = cky_parser.parse_sentence(correct_sentence.split())
-result = cky_parser.evaluate_parse(parse_table)       
+result = cky_parser.evaluate_parse(parse_table)   
 print(result)
                     
