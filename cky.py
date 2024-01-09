@@ -3,7 +3,7 @@ from test_data import sentence_data, expected_results
 import json
 
 class CKYParser:
-    """This class implements the cky parsing algorithm for the given context free grammar and contains methods for generating and evaluating the parse table
+    """Class that implements the cky parsing algorithm for the given context free grammar and contains methods for generating and evaluating the parse table
     """
     
     def __init__(self, grammar: Dict):
