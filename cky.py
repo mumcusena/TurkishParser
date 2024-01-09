@@ -23,30 +23,39 @@ class CKYParser:
                     for lhs, rhs_list in self.grammar.items():
                         for rhs in rhs_list:  
                             if len(rhs) == 2 and rhs[0] in table[i][k] and rhs[1] in table[k][j]:
-                                print(rhs, i, j, k, table[i][k], table[k][j])
+                                print(rhs, i, j, k, table[i][k], table[k][j], lhs)
                                 table[i][j].add(lhs)
                             else:
                                 for item in table[i][k]: 
                                     table[i][j].add(item) 
+                                # for item in table[k][j]: 
+                                #     table[i][j-1].add(item) 
         return table
     
-    def evauate_parse(self, table: List)->bool:
-        parse_result = table[0][-1]
-        return 'S' in parse_result
+    def evaluate_parse(self, table: List)->bool:
+        rhs0 = table[0][-1]
+        rhs1 = table[1][-1]
+        for lhs, rhs_list in self.grammar.items():
+            for rhs in rhs_list:  
+                if len(rhs) == 2 and rhs[0] in rhs0 and rhs[1] in rhs1 and lhs == "S":
+                    return True
+        return False
     
 turkish_grammar = ""
 
-with open('Turkish_grammar.json', 'r') as file:
+with open('grammar.json', 'r') as file:
     turkish_grammar = json.load(file)
     
 cky_parser = CKYParser(turkish_grammar)
 
-sentence = "beyaz kedi yavaşça mama ye"
+# sentence = "sen yavaşça mama ye di n"
+sentence = "ben yavaşça mama ye di n"
 parse_table = cky_parser.parse_sentence(sentence.split())
 
 #parse_table_output = [[list(cell) for cell in row] for row in parse_table]
-print(parse_table)
-print(cky_parser.evauate_parse(parse_table))
+# for row in parse_table:
+    # print(row)
+print(cky_parser.evaluate_parse(parse_table))
 
             
         
