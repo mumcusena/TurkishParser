@@ -1,0 +1,40 @@
+{
+    "S": [["NP", "VP"], ["NP_past", "VP_past"], ["NP_future", "VP_future"], ["NP_first_singular", "VP_first_singular"], ["NP_second_singular", "VP_second_singular"], ["NP_first_plural", "VP_first_plural"], ["NP_second_plural", "VP_second_plural"], ["NP_third_plural", "VP_third_plural"]],
+    "NP": [["NOUN", "NP"]],
+
+    "NP_first_singular": ["PRON_first_singular", "NP"],
+    "VP_first_singular": [["VP", "PRON_first_singular_particle"], ["VP_past", "PRON_first_singular_particle"], ["VP_future", "PRON_first_singular_particle"]],
+    "PRON_first_singular_particle": ["m"],
+    "PRON_first_singular": ["ben"],
+
+    "NP_second_singular": ["PRON_second_singular", "NP"],
+    "VP_second_singular": [["VP", "PRON_second_singular_particle"], ["VP_past", "PRON_second_singular_particle"], ["VP_future", "PRON_second_singular_particle"]],
+    "PRON_second_singular_particle": ["n"],
+    "PRON_second_singular": ["sen"],
+
+    "NP_first_plural": ["PRON_first_plural", "NP"],
+    "VP_first_plural": [["VP", "PRON_first_plural_particle"], ["VP_past", "PRON_first_plural_particle"], ["VP_future", "PRON_first_plural_particle"]],
+    "PRON_first_plural_particle": ["k"],
+    "PRON_first_plural": ["biz"],
+
+    "NP_second_plural": ["PRON_second_plural", "NP"],
+    "VP_second_plural": [["VP", "PRON_second_plural_particle"], ["VP_past", "PRON_second_plural_particle"], ["VP_future", "PRON_second_plural_particle"]],
+    "PRON_second_plural_particle": ["niz"],
+    "PRON_second_plural": ["siz"],
+
+    "NP_third_plural": ["PRON_third_plural", "NP"],
+    "VP_third_plural": [["VP", "PRON_third_plural_particle"], ["VP_past", "PRON_second_third_particle"], ["VP_future", "PRON_second_third_particle"]],
+    "PRON_third_plural_particle": ["ler", "lar"],
+    "PRON_third_plural": ["onlar", "bunlar", "şunlar"],
+
+    "NP_past": [["ADV_past", "NOUN"], ["ADV_past", "NP"], ["NP_past", "NP"]],
+    "VP_past": [["ADV", "VP_past"], ["ADV_past", "VP"], ["VERB", "TENSE_past"]],
+    "ADV_past" : ["dün"],
+    "ADV_future" : ["yarın", "seneye"],
+    "NP_future": [["ADV_future", "NOUN"], ["ADV_future", "NP"], ["NP_future", "NP"]],
+    "VP_future": [["ADV", "VP_future"], ["ADV_future", "VP"], ["VERB", "TENSE_future"]],
+    "VP": [["ADV", "VP"], ["ADV", "VERB"], ["VERB", "NP"], []],
+    "TENSE_past": ["di", "mış"],
+    "TENSE_future": ["ecek"]
+
+}
