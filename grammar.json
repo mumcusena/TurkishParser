@@ -26,6 +26,7 @@
         ["NOUN", "SUFFIX_dative"],
         ["NOUN", "SUFFIX_noun"],
         ["NOUN", "SUFFIX_plural"],
+        ["NOUN", "SUFFIX_with"],
         ["NP", "ADV"],
         ["NP", "NOUN"],
         ["NOUN", "NP"]
