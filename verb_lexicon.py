@@ -9,7 +9,7 @@ verb_lexicon = [
     "hazırla", "hazırlan", "hisset", "iç", "ifade et", "ilerle", "ilgilen", "inan", "incele", "in", "istem", "isten", 
     "izle", "kabul et", "kaç", "kaldır", "kalk", "kal", "kapan", "kapat", "karış", "karıştır", "karşıla", "karşılaş", 
     "katıl", "kaybet", "kavuş", "kaynat", "kazan", "kesil", "kes", "keşfet", "kirala", "kırıl", "kıl", "konuş", "kork", "koru", "koş", "koy", "kop", "közle", "kullanıl", "kullan", 
-    "kur", "kurtar", "kurtul", "kurul", "kutla", "küs", "nişanlan", "numaralandır", "ok", "ol", "oluş", "oluştur", "otur", "oyna", "öde", "öğren", "öldür", "öl", "öner", "övün", "ör", "park", "paylaş", "pişir", "rastla", "rendele", 
+    "kur", "kurtar", "kurtul", "kurul", "kutla", "küs", "nişanlan", "numaralandır", "oku", "ol", "oluş", "oluştur", "otur", "oyna", "öde", "öğren", "öldür", "öl", "öner", "övün", "ör", "park", "paylaş", "pişir", "rastla", "rendele", 
     "sağla", "sağlan", "sahip ol", "sakla", "saldır", "san", "satın al", "sat", "say", "seç", "sev", "seyret", "serp", "sok", "sor", "söyle", 
     "söylen", "söz et", "sun", "sunul", "sürdür", "sür", "tanı", "taşı", "tercih et", "topla", "toplan", "tut", 
     "tutul", "uğraş", "ulaş", "unut", "uygula", "uygulan", "uy", "uyu", "uzan", "uzat", "üret", "var", "veril", 
