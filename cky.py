@@ -46,9 +46,13 @@ cky_parser = CKYParser(turkish_grammar)
 sentence = "yüksek ses le müzik dinle"
 
 correct_tests_sentences = ["sen yavaşça mama ye di n",
-                    "yüksek ses le müzik dinle",
+                    "yüksek ses le müzik dinle me",
+                    "kitap ı nı getir me sin",
+                    "kitap ı aldı",
                     "ben kedi m le okul a git ti m",
                     "siyah kedi yarın gel ecek mi",
+                    "bu agaç ın altında her gece mehtap ı izle r di k",
+                    "destan lar milli kültür ümüz ü ve tarih imiz i anlat ır"
                    ]
 false_tests_sentences = ["sen yavaşça mama ye di m",
                         "anne m bugün okul a git ti n"
