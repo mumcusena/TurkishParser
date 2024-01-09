@@ -2,7 +2,7 @@
     "S": [["NP_past", "VP_past"], ["NP_future", "VP_future"], ["NP", "VP"], ["NP", "VP_first_singular"], ["NP_first_singular", "VP_first_singular"], ["NP_second_singular", "VP_second_singular"], ["NP_second_singular", "VERB_imperative_second_singular"], ["NP", "VERB_imperative_second_singular"]],
     "VP_past": [["VERB", "SUFFIX_past"]],
     "VP_future": [["VERB", "SUFFIX_future"]],
-    "VP": [["VERB", "SUFFIX_continuous"], ["VERB", "SUFFIX_simple"], ["VERB", "TENSE_simple"], ["NOUN", "SUFFIX_copular"], ["VERB"]],
+    "VP": [["VERB", "SUFFIX_continuous"], ["VERB", "SUFFIX_simple"], ["VERB", "TENSE_simple"], ["NOUN", "SUFFIX_copular"], ["VERB"], ["NOUN", "VERB"]],
     "VP_first_singular": [["VERB", "SUFFIX_past_first_singular"]],
     "VP_second_singular": [["VERB", "SUFFIX_past_second_singular"], ["QUESTION_word", "VP_second_singular"], ["NP", "VP_second_singular"], ["NOUN", "VP_second_singular"]],
     "SUFFIX_past": [["TENSE_past", "POSPRON_first_singular"], ["TENSE_past", "POSPRON_first_plural"], ["TENSE_past", "POSPRON_second_singular"], ["TENSE_past", "POSPRON_second_plural"]],
