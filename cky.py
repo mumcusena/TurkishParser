@@ -23,7 +23,7 @@ class CKYParser:
                     for lhs, rhs_list in self.grammar.items():
                         for rhs in rhs_list:  
                             if len(rhs) == 2 and rhs[0] in table[i][k] and rhs[1] in table[k][j]:
-                                print(rhs, i, j, k, table[i][k], table[k][j], lhs)
+                                # print(rhs, i, j, k, table[i][k], table[k][j], lhs)
                                 table[i][j].add(lhs)
                             else:
                                 for item in table[i][k]: 
@@ -33,13 +33,7 @@ class CKYParser:
         return table
     
     def evaluate_parse(self, table: List)->bool:
-        rhs0 = table[0][-1]
-        rhs1 = table[1][-1]
-        for lhs, rhs_list in self.grammar.items():
-            for rhs in rhs_list:  
-                if len(rhs) == 2 and rhs[0] in rhs0 and rhs[1] in rhs1 and lhs == "S":
-                    return True
-        return False
+        return "S" in table[0][-1]
     
 turkish_grammar = ""
 
@@ -50,12 +44,26 @@ cky_parser = CKYParser(turkish_grammar)
 
 # sentence = "sen yavaşça mama ye di n"
 sentence = "yüksek ses le müzik dinle"
-parse_table = cky_parser.parse_sentence(sentence.split())
 
-#parse_table_output = [[list(cell) for cell in row] for row in parse_table]
-# for row in parse_table:
-    # print(row)
-print(cky_parser.evaluate_parse(parse_table))
+correct_tests_sentences = ["sen yavaşça mama ye di n",
+                    "yüksek ses le müzik dinle",
+                    "ben kedi m le okul a git ti m",
+                    "siyah kedi yarın gel ecek mi",
+                   ]
+false_tests_sentences = ["sen yavaşça mama ye di m",
+                        "anne m bugün okul a git ti n"
+                   ]
+
+print("Correct sentences:")
+for correct_sentence in correct_tests_sentences:
+    parse_table = cky_parser.parse_sentence(correct_sentence.split())
+    print(f"{correct_sentence}: {cky_parser.evaluate_parse(parse_table)}")
+
+print("False sentences:")
+for false_sentence in false_tests_sentences:
+    parse_table = cky_parser.parse_sentence(false_sentence.split())
+    print(f"{false_sentence}: {cky_parser.evaluate_parse(parse_table)}")
+
 
             
         
