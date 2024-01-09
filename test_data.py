@@ -25,5 +25,6 @@ false_tests_sentences = ["sen yavaşça mama ye di m",
                         "ben kitap oku n du",
                         "ben okul da git ti m"
                    ]
+
 sentence_data = correct_tests_sentences + false_tests_sentences
 expected_results = [True for _ in range(len(correct_tests_sentences))] + [False for _ in range(len(false_tests_sentences))]
