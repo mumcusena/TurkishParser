@@ -9,7 +9,6 @@ The details for the CFG are as follows:
 - POSPRON first singular: m, um, im, ım
 - POSPRON second singular: n, sin
 - SUFFIX imp third singular: sin, sın, sun, s ̈un
-- SUFFIX third negation: [SUFFIX negation, SUFFIX imp third singular]
 - POSPRON first plural: k
 - POSPRON second plural: niz
 - SUFFIX possessive: ım,  ̈um ̈uz, imiz, ın, in, nun, nin, im, m, i, ı
