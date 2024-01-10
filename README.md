@@ -3,23 +3,23 @@ An implementation of the CKY parsing algorithm for the Turkish language using ou
 
 The details for the CFG are as follows: 
 ## Terminals for Turkish grammar:
-- ADV past: d ̈un
+- ADV past: dün
 - ADV future: seneye, yarın
-- ADV: yava ̧s ̧ca, epeyce
+- ADV: yavaşca, epeyce
 - POSPRON first singular: m, um, im, ım
 - POSPRON second singular: n, sin
-- SUFFIX imp third singular: sin, sın, sun, s ̈un
+- SUFFIX imp third singular: sin, sın, sun, sün
 - POSPRON first plural: k
 - POSPRON second plural: niz
-- SUFFIX possessive: ım,  ̈um ̈uz, imiz, ın, in, nun, nin, im, m, i, ı
-- SUFFIX accusative:  ̈u, i, ı
+- SUFFIX possessive: ım, umuz, imiz, ın, in, nun, nin, im, m, i, ı
+- SUFFIX accusative: ü, i, ı
 - SUFFIX dative: a, ya, e
 - SUFFIX imp second singular: [Empty string for suffix]
 - SUFFIX location: da, ta
 - SUFFIX source: tan, ten, nden, den, dan
 - SUFFIX with: le
 - CONJ: ve
-- ADJ: beyaz, siyah, y ̈uksek, milli, tarihi, her
+- ADJ: beyaz, siyah, yüksek, milli, tarihi, her
 - SUFFIX plural: ler, lar
 - TENSE future: acak, ecek, yecek, yacak
 - TENSE continuous: uyor, yor
